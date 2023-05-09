@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 int main()
 {
     int n;
@@ -7,19 +6,16 @@ int main()
     int max=1;
     while(2*max<=n)
     {
-        max=max*2;
+        max=2*max;
     }
-    int f=max*2;
-    int k,v;
-    k=n-max;
-    v=f-n;
-    if(k>v)
-    {
-        printf("%d",v);
-    }
-    else if(v>k)
-    {
-        printf("%d",k);
-    }
-    
+  int l=max*2;
+  if(n-max>l-n)
+  {
+      printf("%d",l-n);
+  }
+  else
+  {
+      printf("%d",n-max);
+  }
+  
 }
