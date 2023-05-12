@@ -10,19 +10,15 @@ int main()
         for(int j=1;j<=n;j++)
         {
             if(j%a==0 && j%b!=0)
-            {
-                c++;
-            }
+            c++;
             else if(j%b==0 && j%a!=0)
+            c++;
+            if(c==k)
             {
-                c++;
-            }
-            if(c>=k)
-            {
-                printf("Win
+               printf("Win
 ");
-                f=f+1;
-                break;
+               f=f+1;
+               break;
             }
         }
         if(f==0)
