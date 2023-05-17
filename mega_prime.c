@@ -9,35 +9,31 @@ int prime(int n)
             c++;
         }
     }
-    if(c==2)
-     return 1;
-    else
-     return 0;
+    return c;
 }
 int main()
 {
     int n;
     scanf("%d",&n);
-    int x,f=0;
-    if(prime(n)==0)
+    int t=n;
+    int x,f=0,v=0;
+    while(n!=0)
     {
-        printf("Not Mega Prime");
+        x=n%10;
+        f=f+1;
+        if(prime(x)==2)
+        {
+           v=v+1; 
+        }
+        n=n/10;
+    }
+   // printf("%d %d",f,v);
+    if(prime(t)==2 && f==v)
+    {
+        printf("Mega Prime");
     }
     else
     {
-        while(n!=0)
-        {
-            x=n%10;
-            if(prime(x)==0)
-            {
-                printf("Not Mega Prime");
-                 f=f+1;
-                 break;
-            }
-            n=n/10;
-        }
-        if(f==0)
-        printf("Mega Prime");
+        printf("Not Mega Prime");
     }
-   
 }
