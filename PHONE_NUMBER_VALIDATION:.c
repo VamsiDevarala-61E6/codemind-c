@@ -2,18 +2,14 @@
 #include<string.h>
 int main()
 {
-    char s[30];
-    scanf("%s",&s);
-    int l;
-    l=strlen(s);
-    if(s[0]!=0 && l==10)
-    {
+    char s[100];
+    scanf("%[^
+]s",s);
+    if(s[0]!=0 && strlen(s)==10){
         printf("Valid");
     }
     else
     {
         printf("Invalid");
     }
-    
-    
 }
